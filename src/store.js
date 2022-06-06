@@ -11,3 +11,5 @@ export const definitions = derived(apiData, ($apiData) => {
 });
 
 export const selectedDeck = writable();
+
+export const answerData = writable([]);
