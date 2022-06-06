@@ -6,11 +6,12 @@
 </script>
 
 <main>
-	<img {src} alt="Logo" >
-	<h1>Flashcards</h1>
 	{#if start}
 		<Flashcards />
 	{:else}
+		<img {src} alt="Logo" >
+		<h1>Flashcards</h1>
+
 		<button on:click={() => (start = true)}>Start</button>
 	{/if}
 </main>
