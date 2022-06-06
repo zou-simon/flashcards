@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import { apiData, definitions } from "./store.js";
+    import { apiData, definitions, answerData } from "./store.js";
 
     export let word = '';
     export let showCardBack = false;
@@ -20,9 +20,11 @@
 {#if !showCardBack}
     {word}
 {:else}
+    {word}
     <ul>
-        {#each $definitions as definition}
+        {#each $definitions as definition, key}
             <li>
+                <input type="checkbox" bind:group={$answerData} name={word} value={word + '-' + key} />
                 {definition}
             </li>
         {/each}
