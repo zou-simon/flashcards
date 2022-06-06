@@ -16,6 +16,8 @@
   // Force restart component for fetch in ouMount
   let unique = {};
   function restart() {
+    unique = {};
+  }
 
   function changeCard() {
     showCardBack = false;
