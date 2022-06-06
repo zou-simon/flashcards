@@ -5,14 +5,17 @@
   let numberCards = 10;
   let showCardBack = false;
   const toggleShowBack = () => showCardBack = !showCardBack;
-  let word = words[Math.floor(Math.random() * words.length)];
+  let word = getRandomWord();
+
+  function getRandomWord() {
+    return words[Math.floor(Math.random() * words.length)];
+  }
 
   function changeCard() {
     numberCards--;
     if (numberCards > 0) {
       showCardBack = false;
-      word = words[Math.floor(Math.random() * words.length)];
-      console.log(word)
+      word = getRandomWord();
     }
   }
 </script>
