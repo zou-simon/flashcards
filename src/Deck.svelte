@@ -1,4 +1,5 @@
 <script>
+  import { answerData } from "./store.js";
   import { words } from "./words.js";
   import Card from "./Card.svelte";
 
@@ -16,6 +17,8 @@
   // Force restart component for fetch in ouMount
   let unique = {};
   function restart() {
+    unique = {};
+  }
 
   function changeCard() {
     showCardBack = false;
@@ -32,3 +35,4 @@
 {:else}
   <button on:click={changeCard}>Next card</button>
 {/if}
+<button on:click={() => answerData.set([])}>Clear cache</button>
