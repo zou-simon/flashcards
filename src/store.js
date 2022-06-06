@@ -9,3 +9,5 @@ export const definitions = derived(apiData, ($apiData) => {
                 .map(objet => objet.definition)).flat()).flat()
         : [];
 });
+
+export const selectedDeck = writable();

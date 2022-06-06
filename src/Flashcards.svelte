@@ -1,13 +1,18 @@
 <script>
+    import { selectedDeck } from './store.js';
     import Deck from './Deck.svelte';
 
-    let selectedDeck;
+    let selected;
+
+    selectedDeck.subscribe(value => {
+		selected = value;
+	});
 </script>
 
-{#if selectedDeck != undefined}
-<Deck deckNumber={selectedDeck} />
+{#if selected != undefined}
+<Deck deckNumber={selected} />
 {:else}
-<button on:click={() => selectedDeck = 0}>1</button>
-<button on:click={() => selectedDeck = 1}>2</button>
-<button on:click={() => selectedDeck = 2}>3</button>
+<button on:click={() => selectedDeck.set(0)}>1</button>
+<button on:click={() => selectedDeck.set(1)}>2</button>
+<button on:click={() => selectedDeck.set(2)}>3</button>
 {/if}
