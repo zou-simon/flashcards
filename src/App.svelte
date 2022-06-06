@@ -1,7 +1,7 @@
 <script>
-	import Deck from './Deck.svelte';
+	import Flashcards from './Flashcards.svelte';
 </script>
 
 <main>
-	<Deck />
+	<Flashcards />
 </main>
