@@ -13,8 +13,9 @@
     ];
   }
 
+  // Force restart component for fetch in ouMount
   let unique = {};
-  function restart() { unique = {} } // Force restart component for fetch in ouMount
+  function restart() {
 
   function changeCard() {
     showCardBack = false;
@@ -24,7 +25,7 @@
 </script>
 
 {#key unique}
-<Card {word} {showCardBack} />
+  <Card {word} {showCardBack} />
 {/key}
 {#if !showCardBack}
   <button on:click={toggleShowBack}>Return card</button>
