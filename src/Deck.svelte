@@ -34,3 +34,13 @@
 {:else}
   <button on:click={changeCard}>Next card</button>
 {/if}
+
+<style>
+  button {
+    width: 35%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #589cab;
+  }
+</style>
