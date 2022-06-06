@@ -13,13 +13,19 @@
     ];
   }
 
+  let unique = {};
+  function restart() { unique = {} } // Force restart component for fetch in ouMount
+
   function changeCard() {
     showCardBack = false;
     word = getRandomWord();
+    restart();
   }
 </script>
 
+{#key unique}
 <Card {word} {showCardBack} />
+{/key}
 {#if !showCardBack}
   <button on:click={toggleShowBack}>Return card</button>
 {:else}
