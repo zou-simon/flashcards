@@ -20,7 +20,6 @@
 	main {
 		text-align: center;
 		padding: 1em;
-		max-width: 240px;
 		margin: 0 auto;
 		background-color: #f7f7f7;
 	}
@@ -37,16 +36,9 @@
 	}
 
 	button {
-		width: 10%;
 		padding: 15px;
 		border: 1px solid #ccc;
 		border-radius: 5px;
 		background-color: #c0f2fd;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
 	}
 </style>
