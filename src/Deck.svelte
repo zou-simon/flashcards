@@ -1,4 +1,5 @@
 <script>
+  import { answerData, selectedDeck } from "./store.js";
   import { words } from "./words.js";
   import Card from "./Card.svelte";
 
@@ -26,6 +27,8 @@
   }
 </script>
 
+<button on:click={() => selectedDeck.set()}>Home</button>
+<button on:click={() => answerData.set([])}>Clear cache</button>
 {#key unique}
   <Card {word} {showCardBack} />
 {/key}
